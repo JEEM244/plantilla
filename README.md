@@ -1,47 +1,54 @@
-# PixelStation — Plantilla CSS retro
+# Plantilla web — estilo retro terminal
 
-Plantilla inicial para crear páginas web con una estética inspirada en videojuegos arcade y gráficos de 8 bits.
+Plantilla reutilizable para crear páginas con el mismo lenguaje visual del proyecto PIA: fondo oscuro, cuadrícula discreta, tipografía monoespaciada y detalles inspirados en interfaces de videojuegos clásicos.
 
 ## Archivos
 
 - `index.html`: página de demostración con ejemplos de los componentes.
-- `styles.css`: estilos, colores, distribución, componentes, animaciones y ajustes para celular.
+- `styles.css`: colores, distribución, componentes, animaciones y ajustes para celular.
 
 ## Cómo verla
 
-Descarga o clona el repositorio y abre `index.html` en el navegador. No necesita instalar programas, dependencias ni iniciar un servidor.
+Abre `index.html` en tu navegador. No necesita instalar programas, dependencias ni iniciar un servidor.
 
-## Cómo reutilizar el diseño
+## Cómo reutilizarla
 
 1. Copia `styles.css` a tu proyecto.
-2. Enlázalo desde el HTML dentro de `<head>`:
+2. Enlázalo desde el HTML:
 
    ```html
    <link rel="stylesheet" href="styles.css">
    ```
 
-3. Usa las clases de los componentes que necesites: `button`, `panel`, `tag`, `info-card`, `demo-form` y otras.
-4. Cambia los textos y elimina las secciones de demostración que no necesites.
+3. Reutiliza las clases que necesites: `button`, `panel`, `tag`, `info-card`, `demo-form` y otras.
+4. Cambia los textos y elimina las secciones de demostración que no vayas a utilizar.
 
-## Personalizar los colores
+## Colores del diseño
 
-Al principio de `styles.css` está el bloque `:root`. Ahí puedes cambiar los colores principales sin buscar cada regla:
+Los colores están definidos al inicio de `styles.css`, dentro de `:root`:
 
-- `--color-bg`: fondo general.
-- `--color-panel`: fondo de tarjetas y paneles.
-- `--color-primary`: acento principal.
-- `--color-secondary`: acento secundario.
-- `--color-pink` y `--color-yellow`: colores adicionales.
+| Variable | Color | Uso |
+| --- | --- | --- |
+| `--color-bg` | `#0d1117` | Fondo general |
+| `--color-panel` | `#161b22` | Paneles y tarjetas |
+| `--color-text` | `#d7dee6` | Texto principal |
+| `--color-muted` | `#929eaa` | Texto secundario |
+| `--color-border` | `#303943` | Bordes |
+| `--color-primary` | `#58a6ff` | Azul de acento |
+| `--color-secondary` | `#63d471` | Verde de acento |
+| `--color-yellow` | `#f0c674` | Detalles dorados |
 
 ## Qué incluye
 
-- Fondo oscuro con cuadrícula.
-- Colores neón y bordes marcados.
-- Botones con sombra tipo píxel.
+- Fondo oscuro con cuadrícula pequeña y movimiento discreto.
+- Tipografía monoespaciada.
+- Botones rectos con efectos sencillos al pasar el cursor.
 - Paneles, tarjetas, etiquetas y barra de progreso.
 - Campos de formulario.
-- Portada con una ilustración arcade hecha con CSS.
-- Animaciones pequeñas y opción para respetar la preferencia de movimiento reducido.
-- Diseño adaptable a pantallas pequeñas.
+- Portada decorativa construida con CSS.
+- Diseño adaptable a celular.
+- Respeto a la preferencia del sistema para reducir movimiento.
 
-La plantilla utiliza HTML y CSS normales. No depende de Angular, React, PHP, JavaScript ni bases de datos.
+## Tecnologías
+
+Solo utiliza HTML y CSS. No necesita Angular, React, PHP, JavaScript, bases de datos ni dependencias externas.
