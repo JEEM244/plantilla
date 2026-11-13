@@ -7,22 +7,23 @@
 /* 1. COLORES Y MEDIDAS GENERALES */
 :root {
   color-scheme: dark;
-  --color-bg: #090b16;
-  --color-bg-soft: #101426;
-  --color-panel: #151b30;
-  --color-panel-light: #1d2740;
-  --color-text: #f3f4ff;
-  --color-muted: #a3abc4;
-  --color-border: #354263;
-  --color-primary: #55f6d2;
-  --color-secondary: #a78bfa;
-  --color-pink: #ff6fae;
-  --color-yellow: #ffe27a;
-  --color-green: #7cf7a5;
-  --font-main: "Segoe UI", Arial, sans-serif;
-  --font-pixel: "Courier New", monospace;
+  --color-bg: #0d1117;
+  --color-bg-soft: #161b22;
+  --color-panel: #161b22;
+  --color-panel-light: #202832;
+  --color-text: #d7dee6;
+  --color-muted: #929eaa;
+  --color-border: #303943;
+  --color-border-light: #526170;
+  --color-primary: #58a6ff;
+  --color-secondary: #63d471;
+  --color-pink: #f0c674;
+  --color-yellow: #f0c674;
+  --color-green: #63d471;
+  --font-main: "Courier New", Consolas, monospace;
+  --font-pixel: "Courier New", Consolas, monospace;
   --page-width: 1120px;
-  --pixel-shadow: 5px 5px 0 #050711;
+  --pixel-shadow: 4px 4px 0 rgba(0, 0, 0, .28);
   --transition: 180ms ease;
 }
 
@@ -75,12 +76,13 @@ select {
   z-index: -1;
   inset: 0;
   pointer-events: none;
-  opacity: .22;
+  opacity: .38;
   background-image:
-    linear-gradient(rgba(85, 246, 210, .09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(85, 246, 210, .09) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: linear-gradient(to bottom, black, transparent 85%);
+    linear-gradient(rgba(88, 166, 255, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, .055) 1px, transparent 1px),
+    radial-gradient(circle, rgba(99, 212, 113, .14) 1px, transparent 1px);
+  background-size: 8px 8px, 8px 8px, 32px 32px;
+  animation: pia-grid 28s linear infinite;
 }
 
 /* 4. ESTRUCTURA COMPARTIDA */
@@ -121,7 +123,7 @@ select {
   place-items: center;
   color: var(--color-bg);
   background: var(--color-primary);
-  box-shadow: 3px 3px 0 var(--color-secondary);
+  border: 2px solid var(--color-border-light);
 }
 
 .brand-accent,
@@ -156,18 +158,14 @@ select {
   gap: 9px;
   padding: 11px 17px;
   border: 2px solid transparent;
-  border-radius: 2px;
+  border-radius: 0;
   font-family: var(--font-pixel);
   font-size: .72rem;
   font-weight: 900;
   letter-spacing: .035em;
   text-align: center;
   cursor: pointer;
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition),
-    background var(--transition),
-    color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
 }
 
 .button:hover {
@@ -328,7 +326,7 @@ h3 {
   align-items: center;
   gap: 12px;
   margin-top: 34px;
-  color: #77819f;
+  color: #929eaa;
   font-size: .58rem;
 }
 
@@ -346,10 +344,9 @@ h3 {
 /* 8. TARJETA ARCADE DECORATIVA */
 .arcade-card {
   padding: 14px;
-  border: 2px solid var(--color-border);
+  border: 2px solid var(--color-border-light);
   background: var(--color-panel);
-  box-shadow: 8px 8px 0 #050711, 0 0 40px rgba(167, 139, 250, .12);
-  transform: rotate(1deg);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, .32);
 }
 
 .arcade-topbar,
@@ -374,7 +371,11 @@ h3 {
   position: relative;
   min-height: 260px;
   overflow: hidden;
-  background: linear-gradient(#24234d 0%, #563b79 57%, #f28a91 100%);
+  background:
+    linear-gradient(rgba(88, 166, 255, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, .07) 1px, transparent 1px),
+    linear-gradient(145deg, #161b22, #202832);
+  background-size: 8px 8px, 8px 8px, auto;
   image-rendering: pixelated;
 }
 
@@ -385,7 +386,7 @@ h3 {
   width: 72px;
   aspect-ratio: 1;
   background: var(--color-yellow);
-  box-shadow: 0 0 35px rgba(255, 226, 122, .35);
+  box-shadow: 0 0 24px rgba(240, 198, 116, .18);
 }
 
 .mountain {
@@ -400,12 +401,12 @@ h3 {
 
 .mountain-back {
   left: -25px;
-  border-bottom-color: #494077;
+  border-bottom-color: #263b50;
 }
 
 .mountain-front {
   right: -55px;
-  border-bottom-color: #242b53;
+  border-bottom-color: #1d3529;
   transform: scale(1.2);
 }
 
@@ -416,7 +417,7 @@ h3 {
   left: 0;
   height: 45px;
   background: repeating-linear-gradient(90deg, #172b3c 0 18px, #1d3946 18px 36px);
-  border-top: 5px solid #55a78c;
+  border-top: 5px solid var(--color-secondary);
 }
 
 .pixel-character {
@@ -499,7 +500,7 @@ h3 {
 }
 
 .section-index {
-  color: #77819f;
+  color: #929eaa;
   font-size: .6rem;
 }
 
@@ -649,7 +650,7 @@ h3 {
 }
 
 .demo-form input::placeholder {
-  color: #737d9a;
+  color: #687582;
 }
 
 .demo-form .button {
@@ -665,8 +666,9 @@ h3 {
 
 .guide-item {
   padding: 22px;
+  border: 1px solid var(--color-border);
   border-top: 2px solid var(--color-secondary);
-  background: rgba(21, 27, 48, .72);
+  background: rgba(22, 27, 34, .82);
 }
 
 .guide-number {
@@ -713,7 +715,7 @@ code {
   justify-content: space-between;
   gap: 16px;
   border-top: 1px solid var(--color-border);
-  color: #77819f;
+  color: #929eaa;
   font-size: .58rem;
 }
 
@@ -724,6 +726,11 @@ code {
 /* 13. ANIMACIONES SENCILLAS */
 @keyframes blink {
   to { visibility: hidden; }
+}
+
+@keyframes pia-grid {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 32px 32px, 32px 32px, 32px 32px; }
 }
 
 @keyframes character-hop {
