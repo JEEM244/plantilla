@@ -188,19 +188,19 @@ select:focus-visible {
 .button-primary {
   color: #071510;
   background: var(--color-primary);
-  box-shadow: 4px 4px 0 #277e70;
+  box-shadow: 4px 4px 0 #315f87;
 }
 
 .button-primary:hover {
   background: #8affdf;
-  box-shadow: 6px 6px 0 #277e70;
+  box-shadow: 6px 6px 0 #315f87;
 }
 
 .button-outline {
   color: var(--color-primary);
   border-color: var(--color-primary);
   background: transparent;
-  box-shadow: 4px 4px 0 rgba(85, 246, 210, .18);
+  box-shadow: 4px 4px 0 rgba(88, 166, 255, .18);
 }
 
 .button-outline:hover {
@@ -454,7 +454,7 @@ h3 {
   color: white;
   font-size: .65rem;
   text-align: center;
-  text-shadow: 2px 2px #24234d;
+  text-shadow: 2px 2px #0d1117;
 }
 
 .arcade-stats {
