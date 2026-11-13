@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plantilla reutilizable de diseño web con estilo de videojuego retro.">
+  <title>Arcade UI · Plantilla</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Inicio">
+      <span class="brand-mark">PX</span>
+      <span>PIXEL<span class="brand-accent">STATION</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link active" href="#inicio">Inicio</a>
+      <a class="nav-link" href="#componentes">Componentes</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="button button-small button-outline" href="#componentes">Explorar</a>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> PLANTILLA DE INTERFAZ · V.01</p>
+        <h1>DISEÑO CON<br><span class="text-accent">SABOR</span> A 8-BIT<span class="cursor">_</span></h1>
+        <p class="hero-description">
+          Una base visual para crear páginas con estética de videojuegos clásicos:
+          colores neón, bordes marcados, paneles oscuros y detalles pixelados.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#componentes">▶ VER COMPONENTES</a>
+          <a class="button button-ghost" href="#guia">CONOCER EL ESTILO</a>
+        </div>
+        <div class="hero-meta">
+          <span>HTML + CSS</span>
+          <span class="meta-divider"></span>
+          <span>DISEÑO RESPONSIVE</span>
+          <span class="meta-divider"></span>
+          <span>SIN FRAMEWORKS</span>
+        </div>
+      </div>
+
+      <div class="arcade-card">
+        <div class="arcade-topbar">
+          <span>PLAYER 01</span>
+          <span class="live-label">● ONLINE</span>
+        </div>
+        <div class="pixel-screen">
+          <div class="sun"></div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="pixel-character" aria-label="Personaje pixelado decorativo">
+            <span></span>
+          </div>
+          <div class="screen-ground"></div>
+          <p class="screen-message">READY PLAYER ONE</p>
+        </div>
+        <div class="arcade-stats">
+          <div><span class="stat-label">SCORE</span><strong>008420</strong></div>
+          <div><span class="stat-label">LEVEL</span><strong>01</strong></div>
+          <div><span class="stat-label">LIVES</span><strong class="lives">♥ ♥ ♥</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell component-section" id="componentes">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / KIT DE INTERFAZ</p>
+          <h2>PIEZAS DEL <span class="text-accent">JUEGO</span></h2>
+        </div>
+        <span class="section-index">UI KIT — 001</span>
+      </div>
+
+      <div class="component-grid">
+        <article class="panel panel-buttons">
+          <div class="panel-heading"><span>01.</span> BOTONES</div>
+          <p class="muted">Acciones principales y secundarias.</p>
+          <div class="button-stack">
+            <a class="button button-primary" href="#contacto">▶ INICIAR</a>
+            <a class="button button-outline" href="#guia">VER DETALLES</a>
+            <a class="button button-ghost" href="#inicio">VOLVER AL MENÚ</a>
+          </div>
+        </article>
+
+        <article class="panel panel-status">
+          <div class="panel-heading"><span>02.</span> ETIQUETAS</div>
+          <p class="muted">Estados para mostrar información rápida.</p>
+          <div class="tag-list">
+            <span class="tag tag-green">● ACTIVO</span>
+            <span class="tag tag-yellow">◆ EN PROCESO</span>
+            <span class="tag tag-pink">★ DESTACADO</span>
+          </div>
+          <div class="mini-progress">
+            <div class="progress-label"><span>PROGRESO</span><strong>72%</strong></div>
+            <div class="progress-track"><span></span></div>
+          </div>
+        </article>
+
+        <article class="panel panel-info">
+          <div class="panel-heading"><span>03.</span> TARJETA</div>
+          <div class="info-card">
+            <div class="info-icon">✦</div>
+            <div>
+              <span class="card-kicker">NUEVO ELEMENTO</span>
+              <h3>Nombre del proyecto</h3>
+              <p>Usa esta tarjeta para presentar información, tareas o secciones.</p>
+            </div>
+            <span class="card-arrow">↗</span>
+          </div>
+        </article>
+
+        <article class="panel panel-form">
+          <div class="panel-heading"><span>04.</span> CAMPOS</div>
+          <p class="muted">Estilo para formularios y búsquedas.</p>
+          <form class="demo-form" action="#" method="get">
+            <label for="demo-name">NOMBRE DE JUGADOR</label>
+            <input id="demo-name" type="text" placeholder="Escribe aquí...">
+            <label for="demo-option">SELECCIONA UNA OPCIÓN</label>
+            <select id="demo-option">
+              <option>Seleccionar nivel</option>
+              <option>Nivel 01</option>
+              <option>Nivel 02</option>
+            </select>
+            <button class="button button-primary button-full" type="button">CONFIRMAR</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell guide-section" id="guia">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / PERSONALIZACIÓN</p>
+          <h2>CAMBIA LAS <span class="text-accent">REGLAS</span></h2>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-item">
+          <span class="guide-number">A</span>
+          <h3>Colores</h3>
+          <p>Modifica las variables al inicio de <code>styles.css</code> para cambiar el fondo, los acentos y los bordes.</p>
+        </article>
+        <article class="guide-item">
+          <span class="guide-number">B</span>
+          <h3>Tipografía</h3>
+          <p>La plantilla usa fuentes del sistema y una alternativa monoespaciada. Puedes cambiar la familia desde una sola variable.</p>
+        </article>
+        <article class="guide-item">
+          <span class="guide-number">C</span>
+          <h3>Componentes</h3>
+          <p>Reutiliza las clases de botones, paneles, etiquetas y campos en cualquier sección de tu página.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell contact-section" id="contacto">
+      <div>
+        <p class="eyebrow">03 / SIGUIENTE NIVEL</p>
+        <h2>¡TU PROYECTO<br>ESTÁ <span class="text-accent">LISTO!</span></h2>
+      </div>
+      <p class="contact-copy">Esta página es una demostración. Puedes reemplazar sus textos y secciones sin cambiar la base del diseño.</p>
+      <a class="button button-primary" href="#inicio">↑ VOLVER ARRIBA</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>PIXELSTATION <span class="text-accent">©</span> 2026</span>
+    <span>HECHO CON HTML Y CSS</span>
+    <a href="#inicio">VOLVER AL INICIO ↑</a>
+  </footer>
+</body>
+</html>
